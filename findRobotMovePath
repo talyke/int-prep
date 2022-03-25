@@ -1,0 +1,26 @@
+function findRobot(path) 
+{
+  let m = path.length;
+  let left = 0
+  let right = 0;
+  let up = 0;
+  let down = 0;
+
+ for (let i = 0; i < m; i++) 
+ {
+    if (path[i] == "L")
+    left++;
+    else if (path[i] == "R")
+    right++;
+    else if (path[i] == "U")
+    up++;
+    else if (path[i] == "D")
+    down++;
+  }
+  console.log("Robot End Place: (" + (right - left) + ", " + (down - up) + ")");
+}
+
+let path = "LDLUUR";
+findRobot(path);
+
+// output is (-1,-1) in this sample
